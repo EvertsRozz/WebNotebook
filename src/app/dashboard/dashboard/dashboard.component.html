@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="dashboard-wrapper">
+    <div class="dashboard-box">
+      <nav class="dash-nav">
+        <button id="createNew-btn">
+          <img
+            src="../../../assets/images/add-outline.svg"
+            alt="create new button"
+            class="create-new-img"
+          />
+          <p id="create-new">CREATE NEW</p>
+        </button>
+        <form>
+          <img src="../../../assets/images/search-thin.svg" />
+          <input type="text" class="search-tab" />
+        </form>
+      </nav>
+      <br />
+      <main class="dashboard-main">
+        <div class="folder-card" *ngFor="let folder of [0, 1, 2, 3, 4, 5]">
+          <a href="#">
+            <div class="card-bg"></div>
+            <div class="folder-title">{{folder}}</div>
+          </a>
+        </div>
+      </main>
+    </div>
+    <div class="calendar-box">calendar</div>
+  </div>
+</div>

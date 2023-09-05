@@ -1,0 +1,77 @@
+.dash-nav {
+  display: flex;
+  flex-basis: 7%;
+  justify-content: space-between;
+  padding: 10px;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#createNew-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+
+  border: 0;
+  padding: 1px 10px 1px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  width: max-content;
+
+  font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  white-space: pre;
+
+  cursor: pointer;
+  background: #b46980;
+  color: whitesmoke;
+
+  transition: 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#createNew-btn:hover {
+  background: #9e5b6f;
+}
+
+.create-new-img {
+  height: 100%;
+  float: left;
+}
+
+#create-new {
+  display: inline-block;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+.search-tab {
+  display: flex;
+  height: 100%;
+  background: none;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  border-radius: 15px;
+
+  color: whitesmoke;
+  caret-color: whitesmoke;
+  font-size: 1rem;
+}

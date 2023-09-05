@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard-wrapper {
+  height: 80%;
+  width: 90%;
+
+  display: flex;
+  border-radius: 15px;
+}
+
+.dashboard-box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 75%;
+  min-width: 250px;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  animation: Slide_Up 1.4s ease-in-out;
+}
+
+.calendar-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  margin-left: 5%;
+  opacity: 0;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: yellow;
+
+  animation: Slide_Up 1.4s ease-in-out 0.7s forwards;
+}
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

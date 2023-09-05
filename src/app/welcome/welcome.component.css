@@ -1,0 +1,78 @@
+.welcome-box-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome-box {
+  animation: Slide_Up 1.4s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 66%;
+  height: 66%;
+
+  background-image: url(../../assets/images/wallpapersden.com_desert-sun-day-minimalism_3840x2160.jpg);
+  background-size: cover;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+#welcome-box.animate {
+  animation: Slide_Out 1.4s ease;
+}
+
+.welcome-text {
+    color: whitesmoke;
+    font-family: 'Aclonica';
+    font-size: 30px;
+}
+
+.welcome-button > button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Aclonica';
+  color: whitesmoke;
+
+  text-decoration: none;
+  background: rgb(0,129,161);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  transition: background 0.5s;
+}
+
+.welcome-button > button:hover {
+  background: #f75616
+}
+
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes Slide_Out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
