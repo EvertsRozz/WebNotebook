@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
     './css/dashboard-box-cards.css'
   ],
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+  // temporary folder names while im making the front end.
+  // TODO: make backend connection for folders and their names
+  folderNames:string[] = ['Math', 'Programming', 'Daily Notes', 'TODO Journal', 'Book Reviews', 'Lorem Ipsum']
+}

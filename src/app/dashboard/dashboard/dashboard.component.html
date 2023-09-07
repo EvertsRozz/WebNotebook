@@ -17,10 +17,14 @@
       </nav>
       <br />
       <main class="dashboard-main">
-        <div class="folder-card" *ngFor="let folder of [0, 1, 2, 3, 4, 5]">
+        <div class="folder-card" *ngFor="let folderName of folderNames">
           <a href="#">
             <div class="card-bg"></div>
-            <div class="folder-title">{{folder}}</div>
+            <div class="folder-title">{{ folderName }}</div>
+            <div class="extra-info">
+              Last edited:
+              <span class="extra-info-date">22. November</span>
+            </div>
           </a>
         </div>
       </main>
