@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FolderDataService } from '../../services/folder-data.service';
+import { Folder } from '../../dashboard/Folder.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,11 +9,23 @@ import { Component } from '@angular/core';
     './dashboard.component.css',
     './css/dashboard-box-nav.css',
     './css/dashboard-box-cards.css',
-    './css/calendar-box.css'
+    './css/calendar-box.css',
   ],
 })
-export class DashboardComponent {
-  // temporary folder names while im making the front end.
-  // TODO: make backend connection for folders and their names
-  folderNames:string[] = ['Math', 'Programming', 'Daily Notes', 'TODO Journal', 'Book Reviews', 'Lorem Ipsum'] 
+export class DashboardComponent implements OnInit {
+  // Gets data from backend
+  folders: Folder[] = [];
+
+  constructor(private folderDataService: FolderDataService) {}
+
+  ngOnInit(): void {
+    this.folderDataService.getFolderData().subscribe((folders) => {
+      const jsonString = JSON.stringify(folders);
+      console.log(jsonString);
+
+      this.folders = folders;
+    });
+  }
+
+  // folderNames: string[] = ['math', 'english', 'history', 'music', 'sports'];
 }

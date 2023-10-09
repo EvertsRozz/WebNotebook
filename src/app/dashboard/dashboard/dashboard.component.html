@@ -17,13 +17,13 @@
       </nav>
       <br />
       <main class="dashboard-main">
-        <div class="folder-card" *ngFor="let folderName of folderNames">
+        <div class="folder-card" *ngFor="let folder of folders">
           <a href="#">
             <div class="card-bg"></div>
-            <div class="folder-title">{{ folderName }}</div>
+            <div class="folder-title">{{ folder.folderName }}</div>
             <div class="extra-info">
               Last edited:
-              <span class="extra-info-date">22. November</span>
+              <span class="extra-info-date">{{ folder.lastEdited }}</span>
             </div>
           </a>
         </div>
@@ -31,8 +31,11 @@
     </div>
     <div class="calendar-box">
       <div class="calendar-top">CALENDAR</div>
-      <br>
-      <div class="calendar-dates-wrapper">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cumque!</div>
+      <br />
+      <div class="calendar-dates-wrapper">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+        cumque!
+      </div>
     </div>
   </div>
 </div>
